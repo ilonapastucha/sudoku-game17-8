@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #6a888c;
+    font-family: 'Montserrat';
+}
+/*Styles for section title*/
+.title {
+    margin: 50px 0;
+}
+.title h1 {
+    font-size: 40px;
+}
+.game-title {
+    font-family: 'Montserrat';
+    letter-spacing: 5px;
+    background-color: #210c2b;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+/*Styles for section navigation*/
+.nav button,
+.undo-button {
+    margin-right: 50px;
+    margin-bottom: 20px;
+    width: 130px;
+    height: 50px;
+    border-radius: 20px;
+    color: white;
+    background: #210c2b;
+    border: 2px solid #210c2b;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    transition: 0.3s;
+}
+.nav button:hover,
+.undo-button:hover {
+    background-color: #6a888c;
+    color: white;
+    cursor: pointer;
+}
+.nav button:focus,
+.undo-button:focus {
+    outline: none;
+}
+.error-msg {
+    font-size: 18px;
+    display: inline-block;
+    width: 450px;
+    padding: 10px 0;
+    border: 2px solid #210c2b;
+}
+/*Styles for section board*/
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 450px;
+    border: 3px solid;
+    border-right: 1px solid black;
+    margin: 20px auto;
+}
+.undo-button {
+    margin: 0 auto;
+}
+/*Styles to make sudoku grid*/
+.tile:nth-child(3n+3){
+    border-right: 3px solid black;
+}
+.tile:nth-child(n+19){
+    border-bottom: 3px solid black;
+}
+.tile:nth-child(n+28){
+    border-bottom: 1px solid black;
+}
+.tile:nth-child(n+46){
+    border-bottom: 3px solid black;
+}
+.tile:nth-child(n+55){
+    border-bottom: 1px solid black;
+}
+/*Styles for single input*/
+.tile {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    font-size: 18px;
+}
+input:hover {
+    background-color: #6a888c;
+    cursor: pointer;
+}
+input:disabled {
+    background-color: #a93cad;
+    color: black;
+}
+input::-webkit-inner-spin-button, 
+input::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:disabled:hover {
+    background-color: #6a888c;
+    cursor: auto;
+}
